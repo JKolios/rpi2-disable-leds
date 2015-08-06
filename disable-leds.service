@@ -1,0 +1,11 @@
+[Unit]
+Description=Disables both onboard LEDs
+
+[Service]
+type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/disable_leds.sh
+ExecStop=/usr/bin/enable_leds.sh
+
+[Install]
+WantedBy=multi-user.target
